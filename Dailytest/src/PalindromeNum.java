@@ -1,9 +1,11 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class PalindromeNum  
 {
 	
 	public static void main(String args[])
 	{
+		try{
 		
 		int n,rev;    //initalizing both rev and n    
 		int t=0;     // initalizing t
@@ -28,6 +30,11 @@ public class PalindromeNum
 		else   //if the given number and the number we reversed is not same it prints this
 		{
 			System.out.println("the number is not a palindrome number");
+		}
+		}
+		catch(InputMismatchException e)
+		{
+			System.out.println("it's not valid:" +e);
 		}
 		
 		
